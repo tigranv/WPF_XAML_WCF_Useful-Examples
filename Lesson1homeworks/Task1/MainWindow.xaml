@@ -1,0 +1,32 @@
+﻿<Window x:Class="Task1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Task1"
+        mc:Ignorable="d"
+        MinWidth="400"
+        MinHeight="250"
+        Title="MainWindow" Height="350" Width="525">
+    <Window.Background>
+        <ImageBrush ImageSource="https://avatars3.githubusercontent.com/u/23220521?v=3&amp;s=460" Stretch="UniformToFill"/>
+    </Window.Background>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" ></ColumnDefinition>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="1"  HorizontalAlignment="Stretch" VerticalAlignment ="Top">
+            <TextBox x:Name="login"  Height="20"  Margin="0 5 10 5" HorizontalAlignment="Stretch"/>
+            <TextBox x:Name="passwor" Height="20"  Margin="0 5 10 5" HorizontalAlignment="Stretch" />
+            <Button x:Name ="Confirm" Height="20" Click="Show" Margin="0 5 10 5" HorizontalAlignment="Stretch" Content="Confirm"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="0"  HorizontalAlignment="Stretch" VerticalAlignment ="Top">
+            <TextBlock Height="30" Width="100" Margin="0 5 0 5" Text="Login: " HorizontalAlignment="Right"/>
+            <Label Height="30" Width="100" Margin="0 5 0 5" Content="Password" HorizontalAlignment="Right"/>
+
+        </StackPanel>
+    </Grid>
+</Window>
