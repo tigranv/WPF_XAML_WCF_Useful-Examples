@@ -24,5 +24,20 @@ namespace ElementToElementBinding
         {
             InitializeComponent();
         }
+
+        private void Button_Click_SetSmall(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click_SetNormal(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click_SetLarge(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

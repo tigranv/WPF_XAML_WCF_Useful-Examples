@@ -15,12 +15,20 @@
                 IsSnapToTickEnabled="True" TickPlacement="TopLeft">
         </Slider>
 
-        <TextBlock Margin="10"
+        <TextBlock Margin="10" Name="sampleText"
                    FontSize="{Binding ElementName=sliderFontSize, Path=Value, Mode=OneWay}"
                    Text="Elem - Elem Binding">
         </TextBlock>
 
+        <StackPanel Orientation="Horizontal" >
+            <Button Margin="5" Padding="3" Click="Button_Click_SetSmall">Small</Button>
+            <Button Margin="5" Padding="3" Click="Button_Click_SetNormal">Normal</Button>
+            <Button Margin="5" Padding="3" Click="Button_Click_SetLarge">Large</Button>
+        </StackPanel>
         
         
+
+
+
     </StackPanel>
 </Window>
