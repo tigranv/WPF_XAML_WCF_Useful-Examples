@@ -5,11 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Relative_Source_DataContext_Binding_To_class"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="230" Width="525">
 
     <Window.Resources>
         <local:Person x:Key="Person" 
-                      LastName = "Tigran">
+                      FirstName = "Tigran"
+                      LastName="Vardanyan">
         </local:Person>
     </Window.Resources>
 
@@ -40,6 +41,19 @@
 
             <TextBlock Margin="3" FontSize="15" HorizontalAlignment="Center"                
                    Text="Relative Source">
+            </TextBlock>
+
+            <TextBlock FontSize="15" Margin="0 5" 
+                   FontFamily="Courier New" 
+                   Text="{Binding RelativeSource={RelativeSource Mode=Self}, Path=FontFamily}">
+            </TextBlock>
+
+            <TextBlock FontSize="12"
+                   Text="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Window}, Path=FontFamily}">
+            </TextBlock>
+
+            <TextBlock FontSize="15"
+                   Text="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=StackPanel, AncestorLevel=1}, Path=Margin}">
             </TextBlock>
 
         </StackPanel>
