@@ -6,12 +6,60 @@
         xmlns:local="clr-namespace:Relative_Source_DataContext_Binding_To_class"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
+
+    <Window.Resources>
+        <local:Person x:Key="Person" 
+                      LastName = "Tigran">
+        </local:Person>
+    </Window.Resources>
+
     <Grid Margin="3">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        
+
+        <StackPanel Grid.Column="0" Margin="3">
+            <StackPanel.Background>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveCaptionColorKey}}"/>
+            </StackPanel.Background>
+            <TextBlock Margin="3" FontSize="15" HorizontalAlignment="Center"                
+                   Text="Data Source">
+            </TextBlock>
+
+            <TextBlock Margin="3" FontSize="15"                 
+                   Text="{Binding Source={StaticResource Person}, Path=LastName}">
+            </TextBlock>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" Margin="3">
+            <StackPanel.Background>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.MenuBarColorKey}}"/>
+            </StackPanel.Background>
+
+            <TextBlock Margin="3" FontSize="15" HorizontalAlignment="Center"                
+                   Text="Relative Source">
+            </TextBlock>
+
+        </StackPanel>
+
+        <StackPanel Grid.Column="2" Margin="3" DataContext="{StaticResource Person}">
+            <TextBlock Margin="3" FontSize="15" HorizontalAlignment="Center"                
+                   Text="Data Context">
+            </TextBlock>
+
+            <TextBlock>First name</TextBlock>
+            <TextBox Text="{Binding FirstName}"></TextBox>
+
+            <TextBlock>Last name</TextBlock>
+            <TextBox Text="{Binding LastName}"></TextBox>
+
+            <StackPanel.Background>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveCaptionColorKey}}"/>
+            </StackPanel.Background>
+
+        </StackPanel>
+
     </Grid>
 </Window>
