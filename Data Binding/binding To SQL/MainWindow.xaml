@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:binding_To_SQL"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-    <Grid Margin="3">
+    <Grid Margin="3" Name="gridMain">
         <Grid.Background>
             <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveCaptionColorKey}}"/>
         </Grid.Background>
@@ -36,13 +36,13 @@
         
         
         
-        <TextBox Grid.Column="0" Grid.Row="1" 
+        <TextBox Grid.Column="0" Grid.Row="1" Name="TextBoxID" 
                  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="20" Margin="3"
                  > </TextBox>
         <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="1" Margin="3">
-            <Button Content="Get Book By ID" Name="buttonGetBook" VerticalAlignment="Center" Padding="2" ></Button>
-            <Button Content="Update Data in Database" Name="UpdateBook" Padding="2" VerticalAlignment="Center" Margin="10, 0, 0, 0"></Button>
-            <Button Content="List of All Books" Name="buttonShowList"  Padding="2" VerticalAlignment="Center" Margin="10, 0, 0, 0"></Button>
+            <Button Content="Get Book By ID" Name="buttonGetBook" VerticalAlignment="Center" Padding="2" Click="buttonGetBook_Click_1" ></Button>
+            <Button Content="Update Data in Database" Name="UpdateBook" Padding="2" VerticalAlignment="Center" Margin="10, 0, 0, 0" Click="UpdateBook_Click_1"></Button>
+            <Button Content="List of All Books" Name="buttonShowList"  Padding="2" VerticalAlignment="Center" Margin="10, 0, 0, 0" Click="buttonShowList_Click_1"></Button>
         </StackPanel>
 
         <TextBox Grid.Column="1" Grid.Row="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Margin="3"></TextBox>
