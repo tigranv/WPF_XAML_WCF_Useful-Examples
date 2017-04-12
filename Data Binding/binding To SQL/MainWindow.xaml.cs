@@ -41,7 +41,7 @@ namespace binding_To_SQL
             {
                 int bookID = Convert.ToInt32(TextBoxID.Text);
                 CurrentBook = _db.GetBook(bookID);
-                TextBoxID.DataContext = CurrentBook;
+                gridMain.DataContext = CurrentBook;
             }
             catch (Exception)
             {

@@ -28,6 +28,7 @@
                  Grid.ColumnSpan="2" 
                  Height="90" 
                  Margin="10"
+                 Visibility="Collapsed"
                  SelectionChanged="listBooks_SelectionChanged">
             
         </ListBox>
