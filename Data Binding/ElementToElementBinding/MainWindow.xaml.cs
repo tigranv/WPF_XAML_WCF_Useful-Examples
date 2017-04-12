@@ -27,17 +27,17 @@ namespace ElementToElementBinding
 
         private void Button_Click_SetSmall(object sender, RoutedEventArgs e)
         {
-
+            sampleText.FontSize = 5;
         }
 
         private void Button_Click_SetNormal(object sender, RoutedEventArgs e)
         {
-
+            sampleText.FontSize = this.FontSize;
         }
 
         private void Button_Click_SetLarge(object sender, RoutedEventArgs e)
         {
-
+            sampleText.FontSize = 35;
         }
     }
 }

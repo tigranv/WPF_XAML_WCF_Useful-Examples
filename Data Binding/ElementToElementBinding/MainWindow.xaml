@@ -10,25 +10,29 @@
     <StackPanel Margin="10">
 
         <Slider Name="sliderFontSize" Margin="5"
-                Minimum="1" Maximum="40" 
+                Minimum="1" Maximum="45" 
                 Value="20" TickFrequency="1"
                 IsSnapToTickEnabled="True" TickPlacement="TopLeft">
         </Slider>
 
         <TextBlock Margin="10" Name="sampleText"
-                   FontSize="{Binding ElementName=sliderFontSize, Path=Value, Mode=OneWay}"
+                   FontSize="{Binding ElementName=sliderFontSize, Path=Value, Mode=TwoWay}"
                    Text="Elem - Elem Binding">
         </TextBlock>
 
         <StackPanel Orientation="Horizontal" >
-            <Button Margin="5" Padding="3" Click="Button_Click_SetSmall">Small</Button>
-            <Button Margin="5" Padding="3" Click="Button_Click_SetNormal">Normal</Button>
-            <Button Margin="5" Padding="3" Click="Button_Click_SetLarge">Large</Button>
+            <Button Margin="10" Padding="5" Click="Button_Click_SetSmall">Small</Button>
+            <Button Margin="10" Padding="5" Click="Button_Click_SetNormal">Normal</Button>
+            <Button Margin="10" Padding="5" Click="Button_Click_SetLarge">Large</Button>
         </StackPanel>
-        
-        
 
-
+        <StackPanel Orientation="Horizontal" Margin="10">
+            <TextBlock VerticalAlignment="Center" xml:space="preserve">Exact Size:    </TextBlock>
+            <TextBox Text="{Binding ElementName=sampleText, Path=FontSize, 
+                            UpdateSourceTrigger=PropertyChanged, 
+                            Mode=TwoWay}" 
+                     Width="50" BorderThickness="1"></TextBox>
+        </StackPanel>
 
     </StackPanel>
 </Window>
