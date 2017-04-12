@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Multiple_Binding
+namespace Relative_Source_DataContext_Binding_To_class
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -24,11 +24,5 @@ namespace Multiple_Binding
         {
             InitializeComponent();
         }
-    }
-
-    public class Person
-    {
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
     }
 }

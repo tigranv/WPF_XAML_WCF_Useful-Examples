@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElementToElementBinding", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Multiple Binding", "Multiple Binding\Multiple Binding.csproj", "{9DB8B41D-2B57-467E-B144-3520A38B904D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Relative Source DataContext Binding To class", "Relative Source DataContext Binding To class\Relative Source DataContext Binding To class.csproj", "{835ADFA2-6BB8-4B3A-A1AB-5F3BE0A79159}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{9DB8B41D-2B57-467E-B144-3520A38B904D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9DB8B41D-2B57-467E-B144-3520A38B904D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9DB8B41D-2B57-467E-B144-3520A38B904D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{835ADFA2-6BB8-4B3A-A1AB-5F3BE0A79159}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{835ADFA2-6BB8-4B3A-A1AB-5F3BE0A79159}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{835ADFA2-6BB8-4B3A-A1AB-5F3BE0A79159}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{835ADFA2-6BB8-4B3A-A1AB-5F3BE0A79159}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
