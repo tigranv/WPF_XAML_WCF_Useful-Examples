@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ElementToElementBinding
+namespace Multiple_Binding
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -23,21 +23,6 @@ namespace ElementToElementBinding
         public MainWindow()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click_SetSmall(object sender, RoutedEventArgs e)
-        {
-            sampleText.FontSize = 5;
-        }
-
-        private void Button_Click_SetNormal(object sender, RoutedEventArgs e)
-        {
-            sampleText.FontSize = FontSize;
-        }
-
-        private void Button_Click_SetLarge(object sender, RoutedEventArgs e)
-        {
-            sampleText.FontSize = 35;
         }
     }
 }
