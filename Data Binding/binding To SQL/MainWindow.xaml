@@ -27,7 +27,9 @@
         <ListBox Name="listBooks" 
                  Grid.ColumnSpan="2" 
                  Height="90" 
-                 Margin="10">
+                 Margin="10"
+                 SelectionChanged="listBooks_SelectionChanged">
+            
         </ListBox>
 
         <TextBlock Grid.Column="0" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"> Book</TextBlock>
@@ -36,18 +38,17 @@
         
         
         
-        <TextBox Grid.Column="0" Grid.Row="1" Name="TextBoxID" 
-                 HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="20" Margin="3"
-                 > </TextBox>
+        <TextBox Grid.Column="0" Grid.Row="1" Name="TextBoxID"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="20" Margin="3"> </TextBox>
+        
         <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="1" Margin="3">
             <Button Content="Get Book By ID" Name="buttonGetBook" VerticalAlignment="Center" Padding="2" Click="buttonGetBook_Click_1" ></Button>
             <Button Content="Update Data in Database" Name="UpdateBook" Padding="2" VerticalAlignment="Center" Margin="10, 0, 0, 0" Click="UpdateBook_Click_1"></Button>
             <Button Content="List of All Books" Name="buttonShowList"  Padding="2" VerticalAlignment="Center" Margin="10, 0, 0, 0" Click="buttonShowList_Click_1"></Button>
         </StackPanel>
 
-        <TextBox Grid.Column="1" Grid.Row="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Margin="3"></TextBox>
-        <TextBox Grid.Column="1" Grid.Row="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Margin="3"></TextBox>
-        <TextBox Grid.Column="1" Grid.Row="4" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Margin="3"></TextBox>
+        <TextBox Text="{Binding Title}" Name="textBoxTitle" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Margin="3"></TextBox>
+        <TextBox Text="{Binding Author}" Name="textBoxAuthor" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Margin="3"></TextBox>
+        <TextBox Text="{Binding Description}" Name="textBoxDesc" TextWrapping="Wrap" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Margin="3"></TextBox>
 
 
     </Grid>
