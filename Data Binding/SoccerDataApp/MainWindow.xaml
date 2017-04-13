@@ -1,0 +1,33 @@
+﻿<Window x:Class="SoccerDataApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SoccerDataApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid Margin="5">
+        <Grid.RowDefinitions >
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <ListBox  Grid.Row="0" Height="Auto" Visibility="Collapsed">Simple TEXT</ListBox>
+        <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="5" >
+            <TextBox Margin="10,10,30,10" Width="49"></TextBox>
+            <Button x:Name="ShowInNumber" Content="Show In Number" Margin="10"/>
+            <Button x:Name="UpdateDescription" Content="Update Description" Margin="10"  />
+            <Button x:Name="ShowTeam" Content="Show Team" Margin="10" />
+            <Button x:Name="Author" Content="Author" Margin="10" Width="56" Click="Author_Click"></Button>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Grid.Row="2" Margin="5">
+            <Label x:Name="Name" Height="30" Width="80" Margin="10" >Name</Label>
+            <TextBox Name="FirstLastNAme" Width="380" ></TextBox>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Grid.Row="3" Margin="5">
+            <Label x:Name="About" Height="30" Width="80" Margin="10" >About</Label>
+            <TextBox Name="AboutIn" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="380" Height="150" ></TextBox>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Relative Source DataContext
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "binding To SQL", "binding To SQL\binding To SQL.csproj", "{670F99C6-90FF-4BC9-91AF-918371D7D769}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoccerDataApp", "SoccerDataApp\SoccerDataApp.csproj", "{19F370D1-9093-4370-870A-D37B8E7E1914}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{670F99C6-90FF-4BC9-91AF-918371D7D769}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{670F99C6-90FF-4BC9-91AF-918371D7D769}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{670F99C6-90FF-4BC9-91AF-918371D7D769}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19F370D1-9093-4370-870A-D37B8E7E1914}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19F370D1-9093-4370-870A-D37B8E7E1914}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19F370D1-9093-4370-870A-D37B8E7E1914}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19F370D1-9093-4370-870A-D37B8E7E1914}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
