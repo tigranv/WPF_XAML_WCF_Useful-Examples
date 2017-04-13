@@ -12,7 +12,7 @@
 
 ![element to element binding](https://cloud.githubusercontent.com/assets/24522089/24990990/cc5620ea-2028-11e7-9536-f6a64a2234d4.gif)
 
-### DataSource, RelativeSource, DataContext
+### [DataSource, RelativeSource, DataContext](https://github.com/tigranv/WPF_XAML_WCF_Useful-Examples/tree/master/Data%20Binding/Relative%20Source%20DataContext%20Binding%20To%20class)
 
 ![data source relative datacontext](https://cloud.githubusercontent.com/assets/24522089/25021017/ad77b53e-20a1-11e7-817b-01dab7901d85.PNG)
 
