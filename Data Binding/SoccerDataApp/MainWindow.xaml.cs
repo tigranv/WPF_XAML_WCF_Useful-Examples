@@ -31,9 +31,35 @@ namespace SoccerDataApp
             MessageBox.Show("Tigran Vardanyan");
         }
 
+
         private void ShowTeam_Click(object sender, RoutedEventArgs e)
         {
+            if (ListBoxAll.Items.Count != 0 && ListBoxAll.Visibility!=Visibility.Collapsed)
+            {
+                ListBoxAll.Visibility = Visibility.Collapsed;
+                ListBoxAll.Items.Clear();
+            }
+            else
+            {
+                ListBoxAll.Visibility = Visibility.Visible;
+                SqlDataReader reader = null;
+                using (SqlConnection connection = new SqlConnection(Properties.Settings.Default.ConnectionString))
+                {
 
+
+                    SqlCommand command = new SqlCommand("SELECT * FROM [dbo].[Table] ", connection);
+
+                    connection.Open();
+
+                    reader = command.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        ListBoxAll.Items.Add(reader[1]);
+                    }
+                    reader.Close();
+                }
+            }
         }
 
         private void ShowInNumber_Click(object sender, RoutedEventArgs e)

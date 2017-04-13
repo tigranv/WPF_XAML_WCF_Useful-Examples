@@ -13,7 +13,7 @@
             <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition Height="Auto"></RowDefinition>
         </Grid.RowDefinitions>
-        <ListBox  Grid.Row="0" Height="Auto" Visibility="Collapsed">Simple TEXT</ListBox>
+        <ListBox  Name ="ListBoxAll" Grid.Row="0" Height="auto" Visibility="Collapsed"></ListBox>
         <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="5" >
             <TextBox Name="IdTextBox" Margin="10,10,30,10" Width="49"></TextBox>
             <Button x:Name="ShowInNumber" Content="Show In Number" Margin="10" Click="ShowInNumber_Click"/>
@@ -27,7 +27,7 @@
         </StackPanel>
         <StackPanel Orientation="Horizontal" Grid.Row="3" Margin="5">
             <Label x:Name="About" Height="30" Width="80" Margin="10" >About</Label>
-            <TextBox Name="AboutIn" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="380" Height="150" ></TextBox>
+            <TextBox Name="AboutIn" TextWrapping="Wrap" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="380" Height="150" ></TextBox>
         </StackPanel>
     </Grid>
 </Window>
