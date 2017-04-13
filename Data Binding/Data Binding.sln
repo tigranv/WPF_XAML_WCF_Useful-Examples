@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "binding To SQL", "binding T
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoccerDataApp", "SoccerDataApp\SoccerDataApp.csproj", "{19F370D1-9093-4370-870A-D37B8E7E1914}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsingCollectionsInBinding", "UsingCollectionsInBinding\UsingCollectionsInBinding.csproj", "{AF9023F5-9A82-43D9-866F-ACB3A4EB0012}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{19F370D1-9093-4370-870A-D37B8E7E1914}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19F370D1-9093-4370-870A-D37B8E7E1914}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{19F370D1-9093-4370-870A-D37B8E7E1914}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF9023F5-9A82-43D9-866F-ACB3A4EB0012}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF9023F5-9A82-43D9-866F-ACB3A4EB0012}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF9023F5-9A82-43D9-866F-ACB3A4EB0012}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF9023F5-9A82-43D9-866F-ACB3A4EB0012}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
