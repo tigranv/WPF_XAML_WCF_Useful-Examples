@@ -20,7 +20,7 @@
 
 ![tamplate](https://cloud.githubusercontent.com/assets/24522089/25021027/bdb66706-20a1-11e7-9b90-e60707a958ff.PNG)
 
-### Collection Binding
+### [Collection Binding](https://github.com/tigranv/WPF_XAML_WCF_Useful-Examples/tree/master/Data%20Binding/UsingCollectionsInBinding)
 
 ![collectionbinding](https://cloud.githubusercontent.com/assets/24522089/25020984/88722c74-20a1-11e7-917e-a0322e0d042a.gif)
 
