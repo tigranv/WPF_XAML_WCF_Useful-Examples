@@ -12,15 +12,19 @@
 
 ![element to element binding](https://cloud.githubusercontent.com/assets/24522089/24990990/cc5620ea-2028-11e7-9536-f6a64a2234d4.gif)
 
-### Element To Element binding
-
-![collectionbinding](https://cloud.githubusercontent.com/assets/24522089/25020984/88722c74-20a1-11e7-917e-a0322e0d042a.gif)
-
-### 3
+### DataSource, RelativeSource, DataContext
 
 ![data source relative datacontext](https://cloud.githubusercontent.com/assets/24522089/25021017/ad77b53e-20a1-11e7-817b-01dab7901d85.PNG)
 
-### 4
+### Binding Tamplate
 
 ![tamplate](https://cloud.githubusercontent.com/assets/24522089/25021027/bdb66706-20a1-11e7-9b90-e60707a958ff.PNG)
+
+### Collection Binding
+
+![collectionbinding](https://cloud.githubusercontent.com/assets/24522089/25020984/88722c74-20a1-11e7-917e-a0322e0d042a.gif)
+
+
+
+
 
