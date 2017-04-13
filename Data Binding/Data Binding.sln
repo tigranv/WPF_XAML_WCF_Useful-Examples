@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoccerDataApp", "SoccerData
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsingCollectionsInBinding", "UsingCollectionsInBinding\UsingCollectionsInBinding.csproj", "{AF9023F5-9A82-43D9-866F-ACB3A4EB0012}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataTamplate", "DataTamplate\DataTamplate.csproj", "{262FC7B4-4578-4E38-947B-B648B9E79136}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{AF9023F5-9A82-43D9-866F-ACB3A4EB0012}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AF9023F5-9A82-43D9-866F-ACB3A4EB0012}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AF9023F5-9A82-43D9-866F-ACB3A4EB0012}.Release|Any CPU.Build.0 = Release|Any CPU
+		{262FC7B4-4578-4E38-947B-B648B9E79136}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{262FC7B4-4578-4E38-947B-B648B9E79136}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{262FC7B4-4578-4E38-947B-B648B9E79136}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{262FC7B4-4578-4E38-947B-B648B9E79136}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
