@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,6 +29,34 @@ namespace SoccerDataApp
         private void Author_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("Tigran Vardanyan");
+        }
+
+        private void ShowTeam_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ShowInNumber_Click(object sender, RoutedEventArgs e)
+        {
+            int PlayerID = int.Parse(IdTextBox.Text);
+            SqlDataReader reader = null;
+
+            using (SqlConnection connection = new SqlConnection(Properties.Settings.Default.ConnectionString))
+            {
+                
+
+                SqlCommand command = new SqlCommand("SELECT * FROM [dbo].[Table] WHERE ID=@id", connection);
+                command.Parameters.AddWithValue("id", PlayerID);
+                connection.Open();
+
+                reader = command.ExecuteReader();
+                reader.Read();
+
+                FirstLastNAme.Text = reader[1].ToString();
+                AboutIn.Text = reader[2].ToString();
+
+                reader.Close();
+            }
         }
     }
 }
