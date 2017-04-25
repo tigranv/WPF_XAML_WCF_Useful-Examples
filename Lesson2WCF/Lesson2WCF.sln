@@ -5,6 +5,11 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCFSampleApp", "WCFSampleApp\WCFSampleApp.csproj", "{04A831D7-750F-4B65-9B79-DF4391B741FC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApplication1", "WpfApplication1\WpfApplication1.csproj", "{036AE776-F1D8-4785-8A14-3A9D91F720A6}"
+	ProjectSection(ProjectDependencies) = postProject
+		{04A831D7-750F-4B65-9B79-DF4391B741FC} = {04A831D7-750F-4B65-9B79-DF4391B741FC}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +20,10 @@ Global
 		{04A831D7-750F-4B65-9B79-DF4391B741FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{04A831D7-750F-4B65-9B79-DF4391B741FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{04A831D7-750F-4B65-9B79-DF4391B741FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{036AE776-F1D8-4785-8A14-3A9D91F720A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{036AE776-F1D8-4785-8A14-3A9D91F720A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{036AE776-F1D8-4785-8A14-3A9D91F720A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{036AE776-F1D8-4785-8A14-3A9D91F720A6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

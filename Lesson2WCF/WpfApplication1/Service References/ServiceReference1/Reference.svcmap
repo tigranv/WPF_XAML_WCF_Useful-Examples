@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="9ea370bf-2283-4392-9599-cfb7be334498" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8733/BetService/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="d2168e6f-9529-4d8b-92af-0e3e33454624" SourceId="1" SourceUrl="http://localhost:8733/BetService/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="298b2844-947f-4e5e-b896-6ae0c5e5eb2f" SourceId="1" SourceUrl="http://localhost:8733/BetService/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="4cf02a4d-d9a6-4bd0-b38e-b2d0206e941d" SourceId="1" SourceUrl="http://localhost:8733/BetService/mex" />
+    <MetadataFile FileName="Arrays.xsd" MetadataType="Schema" ID="59057647-2f70-4e08-9fb9-8b19cdea72d8" SourceId="1" SourceUrl="http://localhost:8733/BetService/mex" />
+    <MetadataFile FileName="WCFSampleApp.xsd" MetadataType="Schema" ID="10aae968-13de-4c66-956b-73985c376e91" SourceId="1" SourceUrl="http://localhost:8733/BetService/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

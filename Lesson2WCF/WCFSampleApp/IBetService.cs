@@ -15,5 +15,9 @@ namespace WCFSampleApp
 
         [OperationContract]
         List<double> CalculateSin(double[] x);
+
+        [OperationContract]
+        List<Person> GetPerson();
+
     }
 }
