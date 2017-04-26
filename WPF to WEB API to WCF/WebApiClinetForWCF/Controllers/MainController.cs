@@ -4,7 +4,6 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using WebApiClinetForWCF.Models;
 using WebApiClinetForWCF.ServiceReference1;
 
 namespace WebApiClinetForWCF.Controllers
@@ -30,8 +29,7 @@ namespace WebApiClinetForWCF.Controllers
         // POST: api/Main
         public void Post([FromBody]Person value)
         {
-            CompositeType Mytype = WCFclient.GetDataUsingDataContractAsync()
-
+            WCFclient.GetDataUsingDataContractAsync(value);
         }
 
         // PUT: api/Main/5

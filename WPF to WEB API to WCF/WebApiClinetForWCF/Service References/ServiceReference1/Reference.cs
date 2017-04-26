@@ -15,18 +15,18 @@ namespace WebApiClinetForWCF.ServiceReference1 {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="CompositeType", Namespace="http://schemas.datacontract.org/2004/07/WCF")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Person", Namespace="http://schemas.datacontract.org/2004/07/WCF")]
     [System.SerializableAttribute()]
-    public partial class CompositeType : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+    public partial class Person : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool BoolValueField;
+        private int AgeField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string StringValueField;
+        private string NameField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -39,27 +39,27 @@ namespace WebApiClinetForWCF.ServiceReference1 {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool BoolValue {
+        public int Age {
             get {
-                return this.BoolValueField;
+                return this.AgeField;
             }
             set {
-                if ((this.BoolValueField.Equals(value) != true)) {
-                    this.BoolValueField = value;
-                    this.RaisePropertyChanged("BoolValue");
+                if ((this.AgeField.Equals(value) != true)) {
+                    this.AgeField = value;
+                    this.RaisePropertyChanged("Age");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string StringValue {
+        public string Name {
             get {
-                return this.StringValueField;
+                return this.NameField;
             }
             set {
-                if ((object.ReferenceEquals(this.StringValueField, value) != true)) {
-                    this.StringValueField = value;
-                    this.RaisePropertyChanged("StringValue");
+                if ((object.ReferenceEquals(this.NameField, value) != true)) {
+                    this.NameField = value;
+                    this.RaisePropertyChanged("Name");
                 }
             }
         }
@@ -85,10 +85,10 @@ namespace WebApiClinetForWCF.ServiceReference1 {
         System.Threading.Tasks.Task<string> GetDataAsync(int value);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IService1/GetDataUsingDataContractResponse")]
-        WebApiClinetForWCF.ServiceReference1.CompositeType GetDataUsingDataContract(WebApiClinetForWCF.ServiceReference1.CompositeType composite);
+        WebApiClinetForWCF.ServiceReference1.Person GetDataUsingDataContract(WebApiClinetForWCF.ServiceReference1.Person composite);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IService1/GetDataUsingDataContractResponse")]
-        System.Threading.Tasks.Task<WebApiClinetForWCF.ServiceReference1.CompositeType> GetDataUsingDataContractAsync(WebApiClinetForWCF.ServiceReference1.CompositeType composite);
+        System.Threading.Tasks.Task<WebApiClinetForWCF.ServiceReference1.Person> GetDataUsingDataContractAsync(WebApiClinetForWCF.ServiceReference1.Person composite);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -126,11 +126,11 @@ namespace WebApiClinetForWCF.ServiceReference1 {
             return base.Channel.GetDataAsync(value);
         }
         
-        public WebApiClinetForWCF.ServiceReference1.CompositeType GetDataUsingDataContract(WebApiClinetForWCF.ServiceReference1.CompositeType composite) {
+        public WebApiClinetForWCF.ServiceReference1.Person GetDataUsingDataContract(WebApiClinetForWCF.ServiceReference1.Person composite) {
             return base.Channel.GetDataUsingDataContract(composite);
         }
         
-        public System.Threading.Tasks.Task<WebApiClinetForWCF.ServiceReference1.CompositeType> GetDataUsingDataContractAsync(WebApiClinetForWCF.ServiceReference1.CompositeType composite) {
+        public System.Threading.Tasks.Task<WebApiClinetForWCF.ServiceReference1.Person> GetDataUsingDataContractAsync(WebApiClinetForWCF.ServiceReference1.Person composite) {
             return base.Channel.GetDataUsingDataContractAsync(composite);
         }
     }

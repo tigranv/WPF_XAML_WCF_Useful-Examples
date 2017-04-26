@@ -18,14 +18,14 @@
   <xs:element name="GetDataUsingDataContract">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/WCF" minOccurs="0" name="composite" nillable="true" type="q1:CompositeType" />
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/WCF" minOccurs="0" name="composite" nillable="true" type="q1:Person" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="GetDataUsingDataContractResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WCF" minOccurs="0" name="GetDataUsingDataContractResult" nillable="true" type="q2:CompositeType" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WCF" minOccurs="0" name="GetDataUsingDataContractResult" nillable="true" type="q2:Person" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

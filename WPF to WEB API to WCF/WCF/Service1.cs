@@ -15,12 +15,7 @@ namespace WCF
             return string.Format("You entered: {0}", value);
         }
 
-        public Person[] GetDataUsingDataContract(Person composite)
-        {
-            
-        }
-
-        Person IService1.GetDataUsingDataContract(Person composite)
+        public Person GetDataUsingDataContract(Person composite)
         {
             throw new NotImplementedException();
         }
