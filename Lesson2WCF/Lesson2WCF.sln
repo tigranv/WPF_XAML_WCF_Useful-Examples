@@ -7,8 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCFSampleApp", "WCFSampleAp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApplication1", "WpfApplication1\WpfApplication1.csproj", "{036AE776-F1D8-4785-8A14-3A9D91F720A6}"
 	ProjectSection(ProjectDependencies) = postProject
+		{4EA972AC-95BA-47CE-A046-6F4E9C05B2B7} = {4EA972AC-95BA-47CE-A046-6F4E9C05B2B7}
 		{04A831D7-750F-4B65-9B79-DF4391B741FC} = {04A831D7-750F-4B65-9B79-DF4391B741FC}
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wcf2", "Wcf2\Wcf2.csproj", "{4EA972AC-95BA-47CE-A046-6F4E9C05B2B7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,6 +27,10 @@ Global
 		{036AE776-F1D8-4785-8A14-3A9D91F720A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{036AE776-F1D8-4785-8A14-3A9D91F720A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{036AE776-F1D8-4785-8A14-3A9D91F720A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4EA972AC-95BA-47CE-A046-6F4E9C05B2B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EA972AC-95BA-47CE-A046-6F4E9C05B2B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EA972AC-95BA-47CE-A046-6F4E9C05B2B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EA972AC-95BA-47CE-A046-6F4E9C05B2B7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

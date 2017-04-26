@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using WpfApplication1.ServiceReference1;
+using WpfApplication1.ServiceReference2;
 
 namespace WpfApplication1
 {
@@ -38,6 +39,19 @@ namespace WpfApplication1
             {
                 Debug.WriteLine($"{item.Name}, {item.Age}");
             }
+        }
+
+        private async void button2_Click(object sender, RoutedEventArgs e)
+        {
+            var proxy2 = new Service2Client();
+
+            var game = await proxy2.GetDataUsingDataContractAsync(new Game()
+            {
+                BoolValue = true,
+                StringValue = "Jhon"     
+            });
+
+            MessageBox.Show($"{game.StringValue}, {game.BoolValue}");
         }
     }
 }
