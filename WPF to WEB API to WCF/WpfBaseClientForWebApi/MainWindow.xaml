@@ -8,7 +8,7 @@
         Title="MainWindow" Height="350" Width="525">
     <Grid>
         <StackPanel Margin="2">
-            <TextBlock Name="textbox1" Margin="5" Width="150" Height="25" > </TextBlock>
+            <TextBlock Name="textbox1" Margin="5" Width="300" Height="25" > </TextBlock>
 
             <Button Name="button1" Content="ok" Margin="5" Width="150" Height="25" Click="button1_Click"></Button>
             

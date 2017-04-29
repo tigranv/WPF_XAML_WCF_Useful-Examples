@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiPageWPF", "MultiPageWP
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestingForAzure", "TestingForAzure\TestingForAzure.csproj", "{BFB27B46-A6E6-4312-84F1-7043319105EF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LestingLusExample", "LestingLusExample\LestingLusExample.csproj", "{B4905458-0CCA-4C0C-81E9-77F4275FD973}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{BFB27B46-A6E6-4312-84F1-7043319105EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BFB27B46-A6E6-4312-84F1-7043319105EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BFB27B46-A6E6-4312-84F1-7043319105EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4905458-0CCA-4C0C-81E9-77F4275FD973}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4905458-0CCA-4C0C-81E9-77F4275FD973}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4905458-0CCA-4C0C-81E9-77F4275FD973}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4905458-0CCA-4C0C-81E9-77F4275FD973}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
