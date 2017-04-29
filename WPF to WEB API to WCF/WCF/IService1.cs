@@ -15,6 +15,10 @@ namespace WCF
         string GetData(int value);
 
         [OperationContract]
+        string PostData(int value);
+
+
+        [OperationContract]
         Person GetDataUsingDataContract(Person composite);
 
         // TODO: Add your service operations here

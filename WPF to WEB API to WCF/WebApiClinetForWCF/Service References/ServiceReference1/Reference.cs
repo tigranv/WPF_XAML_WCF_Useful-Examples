@@ -84,6 +84,12 @@ namespace WebApiClinetForWCF.ServiceReference1 {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetData", ReplyAction="http://tempuri.org/IService1/GetDataResponse")]
         System.Threading.Tasks.Task<string> GetDataAsync(int value);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/PostData", ReplyAction="http://tempuri.org/IService1/PostDataResponse")]
+        string PostData(int value);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/PostData", ReplyAction="http://tempuri.org/IService1/PostDataResponse")]
+        System.Threading.Tasks.Task<string> PostDataAsync(int value);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IService1/GetDataUsingDataContractResponse")]
         WebApiClinetForWCF.ServiceReference1.Person GetDataUsingDataContract(WebApiClinetForWCF.ServiceReference1.Person composite);
         
@@ -124,6 +130,14 @@ namespace WebApiClinetForWCF.ServiceReference1 {
         
         public System.Threading.Tasks.Task<string> GetDataAsync(int value) {
             return base.Channel.GetDataAsync(value);
+        }
+        
+        public string PostData(int value) {
+            return base.Channel.PostData(value);
+        }
+        
+        public System.Threading.Tasks.Task<string> PostDataAsync(int value) {
+            return base.Channel.PostDataAsync(value);
         }
         
         public WebApiClinetForWCF.ServiceReference1.Person GetDataUsingDataContract(WebApiClinetForWCF.ServiceReference1.Person composite) {

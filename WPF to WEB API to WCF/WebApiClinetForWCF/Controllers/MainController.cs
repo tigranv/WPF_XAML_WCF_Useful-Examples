@@ -21,6 +21,8 @@ namespace WebApiClinetForWCF.Controllers
             //enq WCF-in u kanchum enq ira GetData funkcian inq@ stanuma mi hat tiv(entadrenq ed tiv@ ekel er WPF-ic)
             //u veradardznuma inch vor string, vor@ vorpes result mer stexi get funkcian heta talis WPF-in(hima gna WCF GetData funkcian gti asem)
             string result = WCFclient.GetData(5);
+
+            
     
             return result;
 

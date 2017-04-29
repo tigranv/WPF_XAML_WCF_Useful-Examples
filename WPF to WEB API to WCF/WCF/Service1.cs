@@ -22,5 +22,10 @@ namespace WCF
         {
             throw new NotImplementedException();
         }
+
+        public string PostData(int value)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

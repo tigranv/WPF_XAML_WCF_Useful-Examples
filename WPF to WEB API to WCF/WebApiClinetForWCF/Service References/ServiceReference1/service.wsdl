@@ -13,6 +13,12 @@
   <wsdl:message name="IService1_GetData_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetDataResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_PostData_InputMessage">
+    <wsdl:part name="parameters" element="tns:PostData" />
+  </wsdl:message>
+  <wsdl:message name="IService1_PostData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PostDataResponse" />
+  </wsdl:message>
   <wsdl:message name="IService1_GetDataUsingDataContract_InputMessage">
     <wsdl:part name="parameters" element="tns:GetDataUsingDataContract" />
   </wsdl:message>
@@ -24,6 +30,10 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetData" message="tns:IService1_GetData_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDataResponse" message="tns:IService1_GetData_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="PostData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/PostData" message="tns:IService1_PostData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/PostDataResponse" message="tns:IService1_PostData_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="GetDataUsingDataContract">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetDataUsingDataContract" message="tns:IService1_GetDataUsingDataContract_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDataUsingDataContractResponse" message="tns:IService1_GetDataUsingDataContract_OutputMessage" />
@@ -33,6 +43,15 @@
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="GetData">
       <soap:operation soapAction="http://tempuri.org/IService1/GetData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PostData">
+      <soap:operation soapAction="http://tempuri.org/IService1/PostData" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
