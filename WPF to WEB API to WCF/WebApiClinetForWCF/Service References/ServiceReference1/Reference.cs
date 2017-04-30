@@ -26,6 +26,9 @@ namespace WebApiClinetForWCF.ServiceReference1 {
         private int AgeField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string NameField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
@@ -47,6 +50,19 @@ namespace WebApiClinetForWCF.ServiceReference1 {
                 if ((this.AgeField.Equals(value) != true)) {
                     this.AgeField = value;
                     this.RaisePropertyChanged("Age");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int ID {
+            get {
+                return this.IDField;
+            }
+            set {
+                if ((this.IDField.Equals(value) != true)) {
+                    this.IDField = value;
+                    this.RaisePropertyChanged("ID");
                 }
             }
         }
@@ -79,16 +95,16 @@ namespace WebApiClinetForWCF.ServiceReference1 {
     public interface IService1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetData", ReplyAction="http://tempuri.org/IService1/GetDataResponse")]
-        string GetData(int value);
+        WebApiClinetForWCF.ServiceReference1.Person[] GetData();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetData", ReplyAction="http://tempuri.org/IService1/GetDataResponse")]
-        System.Threading.Tasks.Task<string> GetDataAsync(int value);
+        System.Threading.Tasks.Task<WebApiClinetForWCF.ServiceReference1.Person[]> GetDataAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/PostData", ReplyAction="http://tempuri.org/IService1/PostDataResponse")]
-        string PostData(int value);
+        string PostData(WebApiClinetForWCF.ServiceReference1.Person composite);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/PostData", ReplyAction="http://tempuri.org/IService1/PostDataResponse")]
-        System.Threading.Tasks.Task<string> PostDataAsync(int value);
+        System.Threading.Tasks.Task<string> PostDataAsync(WebApiClinetForWCF.ServiceReference1.Person composite);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IService1/GetDataUsingDataContractResponse")]
         WebApiClinetForWCF.ServiceReference1.Person GetDataUsingDataContract(WebApiClinetForWCF.ServiceReference1.Person composite);
@@ -124,20 +140,20 @@ namespace WebApiClinetForWCF.ServiceReference1 {
                 base(binding, remoteAddress) {
         }
         
-        public string GetData(int value) {
-            return base.Channel.GetData(value);
+        public WebApiClinetForWCF.ServiceReference1.Person[] GetData() {
+            return base.Channel.GetData();
         }
         
-        public System.Threading.Tasks.Task<string> GetDataAsync(int value) {
-            return base.Channel.GetDataAsync(value);
+        public System.Threading.Tasks.Task<WebApiClinetForWCF.ServiceReference1.Person[]> GetDataAsync() {
+            return base.Channel.GetDataAsync();
         }
         
-        public string PostData(int value) {
-            return base.Channel.PostData(value);
+        public string PostData(WebApiClinetForWCF.ServiceReference1.Person composite) {
+            return base.Channel.PostData(composite);
         }
         
-        public System.Threading.Tasks.Task<string> PostDataAsync(int value) {
-            return base.Channel.PostDataAsync(value);
+        public System.Threading.Tasks.Task<string> PostDataAsync(WebApiClinetForWCF.ServiceReference1.Person composite) {
+            return base.Channel.PostDataAsync(composite);
         }
         
         public WebApiClinetForWCF.ServiceReference1.Person GetDataUsingDataContract(WebApiClinetForWCF.ServiceReference1.Person composite) {

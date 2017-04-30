@@ -12,10 +12,10 @@ namespace WCF
     public interface IService1
     {
         [OperationContract]
-        string GetData(int value);
+        List<Person> GetData();
 
         [OperationContract]
-        string PostData(int value);
+        string PostData(Person composite);
 
 
         [OperationContract]
@@ -30,8 +30,27 @@ namespace WCF
     public class Person
     {
         [DataMember]
+        public int ID { get; set; }
+        [DataMember]
         public string Name { get; set; }
         [DataMember]
         public int Age { get; set; }
+    }
+
+
+    // es class@ poxarinuma mer datain, uxxaki ognakan classa vori mijocov personneri list
+    public static class PersonDataClass
+    {
+        public static List<Person> GenerateData()
+        {
+            List<Person> list = new List<Person>();
+            list.Add(new Person() { ID = 1, Name = "Gayane", Age = 18 });
+            list.Add(new Person() { ID = 2, Name = "Vanik", Age = 18 });
+            list.Add(new Person() { ID = 3, Name = "Lusine", Age = 18 });
+            list.Add(new Person() { ID = 4, Name = "Tsovinar", Age = 18 });
+            list.Add(new Person() { ID = 4, Name = "Narek", Age = 18 });
+
+            return list;
+        }
     }
 }

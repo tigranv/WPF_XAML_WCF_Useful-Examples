@@ -15,7 +15,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Net.Http.Formatting;
-
+using System.Collections.ObjectModel;
 
 namespace WpfBaseClientForWebApi
 {
@@ -24,13 +24,18 @@ namespace WpfBaseClientForWebApi
     /// </summary>
     public partial class MainWindow : Window
     {
+        private ObservableCollection<Person> personsList;
         public MainWindow()
         {
             InitializeComponent();
         }
 
+        //Get zaprosi button
         private void button1_Click(object sender, RoutedEventArgs e)
         {
+            //Sarqum enq list vori mej lcnelu enq wcf-ic ekac patasxan@, personneri lista
+            //personsList = new ObservableCollection<Person>();
+
             //Stex sarqum enq httpclient u web.api-in get zapros enq anum 
             HttpClient client = new HttpClient();
             HttpResponseMessage response = client.GetAsync(@"http://localhost:55676/api/main").Result; // ushadir vor qo api-i hascen dnes stex
@@ -38,29 +43,36 @@ namespace WpfBaseClientForWebApi
 
 
 
-            //response-ic kardum enq patasxan@, vor@ json formatova
+            //response-ic kardum enq patasxan@, vor@ json formatov personneri lista
             string message = response.Content.ReadAsStringAsync().Result;
-            //sarqum enq deserialaiser u patasxan@ darcnum enq string
+            //sarqum enq deserialaiser u patasxan@ darcnum enq ObservableCollection<Person>
             JavaScriptSerializer jss = new JavaScriptSerializer();
-            string content = jss.Deserialize<string>(message);
-            //ed string@ qcum enq textboxi mej
-            textbox1.Text = content;
+            personsList = jss.Deserialize<ObservableCollection<Person>>(message);
 
+            foreach (var item in personsList)
+            {
+                Persons_List.Items.Add($"{item.ID} - {item.Name}");
+            }            
+        }
 
+        private void CreateNew_Click(object sender, RoutedEventArgs e)
+        {
+            HttpClient client = new HttpClient();
 
-
-            //esi eli post zaprosi hamara hima petq chi nayel
-            //Person p = new Person() { Name = "Satenik", Age = 20 };
-            //HttpResponseMessage response = client.PostAsync(@"http://localhost:55676/api/main", p, new JsonMediaTypeFormatter()).Result;
-            //string message = response.Content.ReadAsStringAsync().Result;
-            //JavaScriptSerializer jss = new JavaScriptSerializer();
-            //string content = jss.Deserialize<string>(message);
+            Person p = new Person() { ID = int.Parse(textBoxID.Text), Name = textBoxName.Text, Age = int.Parse(textBoxAge.Text),};
+            HttpResponseMessage response = client.PostAsync(@"http://localhost:55676/api/main", p, new JsonMediaTypeFormatter()).Result;
+            string message = response.Content.ReadAsStringAsync().Result;
+            JavaScriptSerializer jss = new JavaScriptSerializer();
+            MessageBox.Show(jss.Deserialize<string>(message));
         }
     }
 
-    //public class Person
-    //{
-    //    public string Name { get; set; }
-    //    public int Age { get; set; }
-    //}
+
+    //esi mer Mersonna uni 3 hat prop
+    public class Person
+    {
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public int Age { get; set; }
+    }
 }
