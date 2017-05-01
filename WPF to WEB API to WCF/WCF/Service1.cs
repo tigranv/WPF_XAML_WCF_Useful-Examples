@@ -1,38 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Serialization;
-using System.ServiceModel;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace WCF
 {
-    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service1" in both code and config file together.
     public class Service1 : IService1
     {
-        private List<Person> PersonsList;
-
-        public Service1()
-        {
-            PersonsList = PersonDataClass.GenerateData();
-        }
         
-
-
-        //@h@n apres))))
-        public List<Person> GetData()
+        //@h@n apres)))), stex amen inch shat parza
+        public IEnumerable<Person> GetData()
         {
-            return PersonsList;
+            //sa sovorakan get zaprosna, vercnuma en datai list@ shprtuma api-in, eni el poxancuma wpf-in
+            return PersonDataClass.list;
         }
 
-        public Person GetDataUsingDataContract(Person composite)
-        {
-            throw new NotImplementedException();
-        }
 
         public string PostData(Person composite)
         {
-            PersonsList.Add(composite);
+            // esi postna, vercnuma ekac personin(stex anun@ composite-a) u avelacnuma en ognakan static class-i listi mej
+            PersonDataClass.list.Add(composite);
+
+            // ete 19-rd tox@ normal katarvuma, veradardzuma string vor sax lava avelacrel em
             return $"{composite.Name}- added to list";
         }
     }
