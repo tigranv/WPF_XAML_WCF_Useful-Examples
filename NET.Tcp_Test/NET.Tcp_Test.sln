@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Net.TcpServer", "Net.TcpServer\Net.TcpServer.csproj", "{6FAF6D90-99D8-4CE8-9532-B98A0D140CA4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfServerNetTCP", "WpfServerNetTCP\WpfServerNetTCP.csproj", "{FA65F01E-676B-4825-9627-A727E81DDBE4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6FAF6D90-99D8-4CE8-9532-B98A0D140CA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6FAF6D90-99D8-4CE8-9532-B98A0D140CA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6FAF6D90-99D8-4CE8-9532-B98A0D140CA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6FAF6D90-99D8-4CE8-9532-B98A0D140CA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA65F01E-676B-4825-9627-A727E81DDBE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA65F01E-676B-4825-9627-A727E81DDBE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA65F01E-676B-4825-9627-A727E81DDBE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA65F01E-676B-4825-9627-A727E81DDBE4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
