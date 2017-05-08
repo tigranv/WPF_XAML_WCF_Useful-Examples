@@ -2,9 +2,6 @@
 
 namespace Relative_Source_DataContext_Binding_To_class
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
