@@ -58,6 +58,26 @@ namespace WpfBaseClientForWebApi
             //patasxan@ messageboxov cuyc enq talis
             MessageBox.Show(jss.Deserialize<string>(message));
         }
+
+
+        //esia avelacel Gay
+        private void UpdateNew_Click(object sender, RoutedEventArgs e)
+        {
+            HttpClient client = new HttpClient();
+
+            //sarqum enq ed personin vor@ petqa update lini, es mas@ lriv nuynna inch post zaprosi jamanak
+            Person p = new Person() { ID = int.Parse(textBoxID.Text), Name = textBoxName.Text, Age = int.Parse(textBoxAge.Text), };
+
+            //put zaprosi het uxarkum enq iran api(apin el vekaluma uxarkuma wcf)
+            HttpResponseMessage response = client.PutAsync(@"http://localhost:55676/api/main", p, new JsonMediaTypeFormatter()).Result;
+
+            //api-ic stanum enq patasxan ardyoq sax lava gnacel te voch
+            string message = response.Content.ReadAsStringAsync().Result;
+            JavaScriptSerializer jss = new JavaScriptSerializer();
+
+            //patasxan@ messageboxov cuyc enq talis
+            MessageBox.Show(jss.Deserialize<string>(message));
+        }
     }
 
 

@@ -1,8 +1,11 @@
-﻿using System;
+﻿using ServiceClassLibrary;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.ServiceModel;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -20,48 +23,31 @@ namespace WpfServerNetTCP
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     /// 
-    [ServiceBehavior(InstanceContextMode = InstanceContextMode.PerCall)]
 
+    [ServiceBehavior(InstanceContextMode = InstanceContextMode.PerCall)]
     public partial class MainWindow : Window, IMessage
     {
+        private static List<IMessageCallback> subscribers = new List<IMessageCallback>();
+        private static ObservableCollection<string> onlineusers = new ObservableCollection<string>();
+        public ServiceHost host = null;
         public MainWindow()
         {
             InitializeComponent();
+            
         }
-
-        private static List<IMessageCallback> subscribers = new List<IMessageCallback>();
-        public ServiceHost host = null;
 
         private void buttonStart_Click(object sender, RoutedEventArgs e)
         {
-            using (ServiceHost host = new ServiceHost(
-                typeof(MainWindow),
-                new Uri("net.tcp://localhost:8000")))
-            {
-                //notice the NetTcpBinding?  This allows programs instead of web stuff
-                // to communicate with each other
-                host.AddServiceEndpoint(typeof(IMessage), new NetTcpBinding(), "ISubscribe");
-
-                try
-                {
-                    host.Open();
-                    labelStatus.Content = "Successfully opened port 8000.";
-                   
-                }
-                catch (Exception)
-                {
-                    labelStatus.Content = "Error";
-                }
-            }
+            host = new ServiceHost(typeof(MainWindow), new Uri("net.tcp://localhost:7000"));
+            host.AddServiceEndpoint(typeof(IMessage), new NetTcpBinding(), "ISubscribe");
+            host.Open();
+            labelStatus.Content = "connected";
         }
 
         private void buttonStop_Click(object sender, RoutedEventArgs e)
         {
-            if (host != null)
-            {
-                host.Close();
-            }
-            labelStatus.Content = "Successfully closed port 8000.";
+            host.Close();
+            labelStatus.Content = "Disconnected";
         }
 
         public bool Subscribe()
@@ -97,14 +83,13 @@ namespace WpfServerNetTCP
             }
         }
 
-        public void AddMessage(String message)
+        public void AddMessage(string message)
         {
             //Go through the list of connections and call their callback funciton
             subscribers.ForEach(delegate (IMessageCallback callback)
             {
                 if (((ICommunicationObject)callback).State == CommunicationState.Opened)
                 {
-                    TxBlockOperations.Text = $"Calling OnMessageAdded on callback ({callback.GetHashCode()}).";
                     callback.OnMessageAdded(message, DateTime.Now);
                 }
                 else
@@ -112,7 +97,15 @@ namespace WpfServerNetTCP
                     subscribers.Remove(callback);
                 }
             });
+        }
 
+        public ObservableCollection<string> OnlineUsers()
+        {
+            foreach (var item in subscribers)
+            {
+                onlineusers.Add(item.GetHashCode().ToString());
+            }
+            return onlineusers;
         }
     }
 }

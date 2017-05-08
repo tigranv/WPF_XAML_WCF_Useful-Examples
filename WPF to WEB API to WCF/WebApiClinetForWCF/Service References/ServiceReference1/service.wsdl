@@ -19,6 +19,12 @@
   <wsdl:message name="IService1_PostData_OutputMessage">
     <wsdl:part name="parameters" element="tns:PostDataResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_UpdateData_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateData" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDataResponse" />
+  </wsdl:message>
   <wsdl:portType name="IService1">
     <wsdl:operation name="GetData">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetData" message="tns:IService1_GetData_InputMessage" />
@@ -27,6 +33,10 @@
     <wsdl:operation name="PostData">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/PostData" message="tns:IService1_PostData_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/PostDataResponse" message="tns:IService1_PostData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdateData" message="tns:IService1_UpdateData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdateDataResponse" message="tns:IService1_UpdateData_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
@@ -42,6 +52,15 @@
     </wsdl:operation>
     <wsdl:operation name="PostData">
       <soap:operation soapAction="http://tempuri.org/IService1/PostData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateData">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpdateData" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

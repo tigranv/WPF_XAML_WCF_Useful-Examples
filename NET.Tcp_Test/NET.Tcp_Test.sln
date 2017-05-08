@@ -5,6 +5,10 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfServerNetTCP", "WpfServerNetTCP\WpfServerNetTCP.csproj", "{FA65F01E-676B-4825-9627-A727E81DDBE4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfClient", "WpfClient\WpfClient.csproj", "{6AA20813-AF30-42D4-954E-C1D47ADA5F36}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceClassLibrary1", "ServiceClassLibrary\ServiceClassLibrary1.csproj", "{E4A12443-7CF9-4DA5-B70E-6D6BEBEEDBA4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{FA65F01E-676B-4825-9627-A727E81DDBE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FA65F01E-676B-4825-9627-A727E81DDBE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FA65F01E-676B-4825-9627-A727E81DDBE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AA20813-AF30-42D4-954E-C1D47ADA5F36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AA20813-AF30-42D4-954E-C1D47ADA5F36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AA20813-AF30-42D4-954E-C1D47ADA5F36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AA20813-AF30-42D4-954E-C1D47ADA5F36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4A12443-7CF9-4DA5-B70E-6D6BEBEEDBA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4A12443-7CF9-4DA5-B70E-6D6BEBEEDBA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4A12443-7CF9-4DA5-B70E-6D6BEBEEDBA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4A12443-7CF9-4DA5-B70E-6D6BEBEEDBA4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -32,6 +32,20 @@ namespace WebApiClinetForWCF.Controllers
 
             else
                 return BadRequest();
-        }      
+        }
+
+        // put zapros
+        public IHttpActionResult Put([FromBody]Person value)
+        {
+            // stex valie-n wpf-ic ekac nor personna, iran vorpes parametr talis enw wxf-i postdata funkciayin
+            // vor@ patasxaneluya stringov ete amen inch lav gna, ete che urem response-@ null klini
+            string response = WCFclient.UpdateDataAsync(value).Result;
+
+            //stex wpf-in asum enq sax lava te che
+            if (response != null)
+                return Ok(response);
+            else
+                return BadRequest();
+        }
     }
 }

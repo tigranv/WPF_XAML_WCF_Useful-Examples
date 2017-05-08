@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WpfServerNetTCP
+namespace ServiceClassLibrary
 {
     //interface declarations just like the client but the callback 
     //decleration is a little different
@@ -27,5 +28,8 @@ namespace WpfServerNetTCP
         bool Subscribe();
         [OperationContract]
         bool Unsubscribe();
+
+        [OperationContract]
+        ObservableCollection<string> OnlineUsers();
     }
 }

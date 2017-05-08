@@ -105,6 +105,12 @@ namespace WebApiClinetForWCF.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/PostData", ReplyAction="http://tempuri.org/IService1/PostDataResponse")]
         System.Threading.Tasks.Task<string> PostDataAsync(WebApiClinetForWCF.ServiceReference1.Person composite);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/UpdateData", ReplyAction="http://tempuri.org/IService1/UpdateDataResponse")]
+        string UpdateData(WebApiClinetForWCF.ServiceReference1.Person composite);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/UpdateData", ReplyAction="http://tempuri.org/IService1/UpdateDataResponse")]
+        System.Threading.Tasks.Task<string> UpdateDataAsync(WebApiClinetForWCF.ServiceReference1.Person composite);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -148,6 +154,14 @@ namespace WebApiClinetForWCF.ServiceReference1 {
         
         public System.Threading.Tasks.Task<string> PostDataAsync(WebApiClinetForWCF.ServiceReference1.Person composite) {
             return base.Channel.PostDataAsync(composite);
+        }
+        
+        public string UpdateData(WebApiClinetForWCF.ServiceReference1.Person composite) {
+            return base.Channel.UpdateData(composite);
+        }
+        
+        public System.Threading.Tasks.Task<string> UpdateDataAsync(WebApiClinetForWCF.ServiceReference1.Person composite) {
+            return base.Channel.UpdateDataAsync(composite);
         }
     }
 }

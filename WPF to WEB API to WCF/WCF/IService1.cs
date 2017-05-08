@@ -13,6 +13,9 @@ namespace WCF
 
         [OperationContract]
         string PostData(Person composite);
+
+        [OperationContract]
+        string UpdateData(Person composite);
     }
 
 
