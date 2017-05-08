@@ -8,10 +8,6 @@
         MinWidth="400"
         MinHeight="250"
         Title="MainWindow" Height="350" Width="525">
-    <Window.Background>
-        <ImageBrush ImageSource="https://avatars3.githubusercontent.com/u/23220521?v=3&amp;s=460" Stretch="UniformToFill"/>
-    </Window.Background>
-
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" ></ColumnDefinition>
