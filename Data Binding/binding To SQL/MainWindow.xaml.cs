@@ -4,9 +4,7 @@ using System.Windows.Controls;
 
 namespace binding_To_SQL
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
+
     public partial class MainWindow : Window
     {
         Book CurrentBook = null;
