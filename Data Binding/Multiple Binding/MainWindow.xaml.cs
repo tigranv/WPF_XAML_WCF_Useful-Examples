@@ -8,7 +8,5 @@ namespace Multiple_Binding
         {
             InitializeComponent();
         }
-    }
-
-   
+    }   
 }
