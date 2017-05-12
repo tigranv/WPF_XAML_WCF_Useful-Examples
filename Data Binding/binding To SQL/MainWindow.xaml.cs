@@ -67,7 +67,7 @@ namespace binding_To_SQL
             }
             else
             {
-                listBooks.Visibility = System.Windows.Visibility.Collapsed;
+                listBooks.Visibility = Visibility.Collapsed;
             }
             isCollapsed = !isCollapsed;
 
