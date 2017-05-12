@@ -82,7 +82,7 @@ namespace binding_To_SQL
                 catch (Exception ex)
                 {
                     reader.Close();
-                    throw ex;
+                    MessageBox.Show(ex.Message);
                 }
                 connection.Close();
             }
