@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Windows;
 
 namespace binding_To_SQL
 {
@@ -34,7 +35,7 @@ namespace binding_To_SQL
                     {
                         reader.Close();
                     }
-                    throw e;
+                    MessageBox.Show(e.Message);
                 }
                 connection.Close();
                 return book;
