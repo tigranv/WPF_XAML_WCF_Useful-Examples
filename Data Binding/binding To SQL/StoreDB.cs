@@ -30,14 +30,16 @@ namespace binding_To_SQL
                     };
                 }
                 catch (Exception e)
+                {         
+                    MessageBox.Show(e.Message);
+                }
+                finally
                 {
                     if (reader != null)
                     {
                         reader.Close();
                     }
-                    MessageBox.Show(e.Message);
                 }
-                connection.Close();
                 return book;
             }
         }
@@ -53,7 +55,6 @@ namespace binding_To_SQL
                 command.Parameters.AddWithValue("ID", bookId);
                 connection.Open();
                 command.ExecuteNonQuery();
-                connection.Close();
             }
         }
 
@@ -81,10 +82,12 @@ namespace binding_To_SQL
                 }
                 catch (Exception ex)
                 {
-                    reader.Close();
                     MessageBox.Show(ex.Message);
                 }
-                connection.Close();
+                finally
+                {
+                    reader.Close();
+                }
             }
             return books;
         }

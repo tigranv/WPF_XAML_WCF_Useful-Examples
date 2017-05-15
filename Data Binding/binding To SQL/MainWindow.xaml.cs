@@ -34,7 +34,6 @@ namespace binding_To_SQL
             {
                 MessageBox.Show("Error !!!.");
             }
-
         }
 
         private void UpdateBook_Click_1(object sender, RoutedEventArgs e)
@@ -54,7 +53,7 @@ namespace binding_To_SQL
         {
             if (isCollapsed)
             {
-                listBooks.Visibility = System.Windows.Visibility.Visible;
+                listBooks.Visibility = Visibility.Visible;
                 try
                 {
                     listBooks.ItemsSource = _db.GetAllBooks();
@@ -70,7 +69,6 @@ namespace binding_To_SQL
                 listBooks.Visibility = Visibility.Collapsed;
             }
             isCollapsed = !isCollapsed;
-
         }
     }
 }
