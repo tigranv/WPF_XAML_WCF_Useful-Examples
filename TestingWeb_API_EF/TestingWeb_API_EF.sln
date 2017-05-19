@@ -5,6 +5,10 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WEB.API_Test", "WEB.API_Test", "{57262197-C283-4CAC-A40A-90B5D25E3667}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataBaseProject_Test", "DataBaseProject_Test", "{342FC4E9-4626-4F2A-AECD-00B7D041460B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WPF_Client_Test", "WPF_Client_Test", "{ECA9154C-74BA-43C6-B5E9-F3CF4271AD4E}"
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
