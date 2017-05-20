@@ -7,26 +7,23 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TestingEF_dbConnectionConsole
+namespace DataBaseManagerClassLibrary
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Partner
+    public partial class EmailList
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Partner()
+        public EmailList()
         {
-            this.EmailLists = new HashSet<EmailList>();
+            this.Partners = new HashSet<Partner>();
         }
     
-        public int PartnerID { get; set; }
-        public string FullName { get; set; }
-        public string CompanyName { get; set; }
-        public string Position { get; set; }
-        public string Email { get; set; }
+        public int EmailListID { get; set; }
+        public string EmailListName { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<EmailList> EmailLists { get; set; }
+        public virtual ICollection<Partner> Partners { get; set; }
     }
 }

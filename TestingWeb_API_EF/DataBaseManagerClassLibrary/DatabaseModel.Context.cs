@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TestingEF_dbConnectionConsole
+namespace DataBaseManagerClassLibrary
 {
     using System;
     using System.Data.Entity;

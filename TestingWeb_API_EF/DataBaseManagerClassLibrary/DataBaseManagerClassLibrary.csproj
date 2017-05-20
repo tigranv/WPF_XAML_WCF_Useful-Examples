@@ -4,17 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{84FE65ED-11EC-4776-9727-2A83E61B84A5}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{015F12D1-A6E2-4948-BDFE-884103D23162}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TestingEF_dbConnectionConsole</RootNamespace>
-    <AssemblyName>TestingEF_dbConnectionConsole</AssemblyName>
+    <RootNamespace>DataBaseManagerClassLibrary</RootNamespace>
+    <AssemblyName>DataBaseManagerClassLibrary</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -54,52 +51,52 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="crmdB.Context.cs">
+    <Compile Include="DatabaseModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>crmdB.Context.tt</DependentUpon>
+      <DependentUpon>DatabaseModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="crmdB.cs">
+    <Compile Include="DatabaseModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>crmdB.tt</DependentUpon>
+      <DependentUpon>DatabaseModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="crmdB.Designer.cs">
+    <Compile Include="DatabaseModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>crmdB.edmx</DependentUpon>
+      <DependentUpon>DatabaseModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="EmailList.cs">
-      <DependentUpon>crmdB.tt</DependentUpon>
+      <DependentUpon>DatabaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Partner.cs">
-      <DependentUpon>crmdB.tt</DependentUpon>
+      <DependentUpon>DatabaseModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-    <EntityDeploy Include="crmdB.edmx">
+    <EntityDeploy Include="DatabaseModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>crmdB.Designer.cs</LastGenOutput>
+      <LastGenOutput>DatabaseModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="crmdB.edmx.diagram">
-      <DependentUpon>crmdB.edmx</DependentUpon>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="DatabaseModel.edmx.diagram">
+      <DependentUpon>DatabaseModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="crmdB.Context.tt">
+    <Content Include="DatabaseModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>crmdB.Context.cs</LastGenOutput>
-      <DependentUpon>crmdB.edmx</DependentUpon>
+      <LastGenOutput>DatabaseModel.Context.cs</LastGenOutput>
+      <DependentUpon>DatabaseModel.edmx</DependentUpon>
     </Content>
-    <Content Include="crmdB.edmx.sql" />
-    <Content Include="crmdB.tt">
+    <Content Include="DatabaseModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>crmdB.edmx</DependentUpon>
-      <LastGenOutput>crmdB.cs</LastGenOutput>
+      <DependentUpon>DatabaseModel.edmx</DependentUpon>
+      <LastGenOutput>DatabaseModel.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>

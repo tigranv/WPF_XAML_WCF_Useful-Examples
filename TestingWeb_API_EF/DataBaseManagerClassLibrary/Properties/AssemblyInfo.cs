@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("TestingEF_dbConnectionConsole")]
+[assembly: AssemblyTitle("DataBaseManagerClassLibrary")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("TestingEF_dbConnectionConsole")]
+[assembly: AssemblyProduct("DataBaseManagerClassLibrary")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("84fe65ed-11ec-4776-9727-2a83e61b84a5")]
+[assembly: Guid("015f12d1-a6e2-4948-bdfe-884103d23162")]
 
 // Version information for an assembly consists of the following four values:
 //

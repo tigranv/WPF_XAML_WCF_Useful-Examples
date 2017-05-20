@@ -4,9 +4,9 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="f2505ee1ae76414d8acb806d0410c680" Name="Diagram1">
-        <EntityTypeShape EntityType="BetC_CRM_DatabaseModel.EmailList" Width="1.5" PointX="1.625" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="BetC_CRM_DatabaseModel.Partner" Width="1.5" PointX="4.75" PointY="1" IsExpanded="true" />
+      <Diagram DiagramId="ac4004c6c9554c5cabab1e364f53de9e" Name="Diagram1">
+        <EntityTypeShape EntityType="BetC_CRM_DatabaseModel.EmailList" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BetC_CRM_DatabaseModel.Partner" Width="1.5" PointX="5.125" PointY="1.125" IsExpanded="true" />
         <AssociationConnector Association="BetC_CRM_DatabaseModel.EmailListPartners" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
