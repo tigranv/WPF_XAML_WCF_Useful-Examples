@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "testClient", "testClient\te
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "ParkingExample", "DataBaseProject_Test\ParkingExample\ParkingExample.sqlproj", "{5C96DEF6-B01B-45A4-BC25-48B2E0891F61}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "manyToManyExampleConsole", "manyToManyExampleConsole\manyToManyExampleConsole.csproj", "{037605E8-DF4A-446C-B05B-E64D09169C1D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,11 +31,16 @@ Global
 		{5C96DEF6-B01B-45A4-BC25-48B2E0891F61}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5C96DEF6-B01B-45A4-BC25-48B2E0891F61}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5C96DEF6-B01B-45A4-BC25-48B2E0891F61}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{037605E8-DF4A-446C-B05B-E64D09169C1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{037605E8-DF4A-446C-B05B-E64D09169C1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{037605E8-DF4A-446C-B05B-E64D09169C1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{037605E8-DF4A-446C-B05B-E64D09169C1D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{8F36B2E5-71E3-4C23-AD93-6823B19E308D} = {ECA9154C-74BA-43C6-B5E9-F3CF4271AD4E}
+		{037605E8-DF4A-446C-B05B-E64D09169C1D} = {342FC4E9-4626-4F2A-AECD-00B7D041460B}
 	EndGlobalSection
 EndGlobal
