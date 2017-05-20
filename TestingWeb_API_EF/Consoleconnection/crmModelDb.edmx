@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="BetC_CRM_DatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="EmailListPartners">
+          <Key>
+            <PropertyRef Name="EmailLists_EmailListID" />
+            <PropertyRef Name="Partners_PartnerID" />
+          </Key>
+          <Property Name="EmailLists_EmailListID" Type="int" Nullable="false" />
+          <Property Name="Partners_PartnerID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="EmailLists">
+          <Key>
+            <PropertyRef Name="EmailListID" />
+          </Key>
+          <Property Name="EmailListID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EmailListName" Type="varchar" MaxLength="200" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Partners">
+          <Key>
+            <PropertyRef Name="PartnerID" />
+          </Key>
+          <Property Name="PartnerID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FullName" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="CompanyName" Type="varchar" MaxLength="200" />
+          <Property Name="Position" Type="varchar" MaxLength="50" />
+          <Property Name="Email" Type="varchar" MaxLength="150" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_EmailListPartners_EmailLists">
+          <End Role="EmailLists" Type="Self.EmailLists" Multiplicity="1" />
+          <End Role="EmailListPartners" Type="Self.EmailListPartners" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EmailLists">
+              <PropertyRef Name="EmailListID" />
+            </Principal>
+            <Dependent Role="EmailListPartners">
+              <PropertyRef Name="EmailLists_EmailListID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EmailListPartners_Partners">
+          <End Role="Partners" Type="Self.Partners" Multiplicity="1" />
+          <End Role="EmailListPartners" Type="Self.EmailListPartners" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Partners">
+              <PropertyRef Name="PartnerID" />
+            </Principal>
+            <Dependent Role="EmailListPartners">
+              <PropertyRef Name="Partners_PartnerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="BetC_CRM_DatabaseModelStoreContainer">
+          <EntitySet Name="EmailListPartners" EntityType="Self.EmailListPartners" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EmailLists" EntityType="Self.EmailLists" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Partners" EntityType="Self.Partners" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_EmailListPartners_EmailLists" Association="Self.FK_EmailListPartners_EmailLists">
+            <End Role="EmailLists" EntitySet="EmailLists" />
+            <End Role="EmailListPartners" EntitySet="EmailListPartners" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EmailListPartners_Partners" Association="Self.FK_EmailListPartners_Partners">
+            <End Role="Partners" EntitySet="Partners" />
+            <End Role="EmailListPartners" EntitySet="EmailListPartners" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="BetC_CRM_DatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="EmailList">
+          <Key>
+            <PropertyRef Name="EmailListID" />
+          </Key>
+          <Property Name="EmailListID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EmailListName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Partners" Relationship="Self.EmailListPartners" FromRole="EmailLists" ToRole="Partners" />
+        </EntityType>
+        <EntityType Name="Partner">
+          <Key>
+            <PropertyRef Name="PartnerID" />
+          </Key>
+          <Property Name="PartnerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FullName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CompanyName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Position" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="EmailLists" Relationship="Self.EmailListPartners" FromRole="Partners" ToRole="EmailLists" />
+        </EntityType>
+        <Association Name="EmailListPartners">
+          <End Role="EmailLists" Type="Self.EmailList" Multiplicity="*" />
+          <End Role="Partners" Type="Self.Partner" Multiplicity="*" />
+        </Association>
+        <EntityContainer Name="BetC_CRM_DatabaseEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="EmailLists" EntityType="Self.EmailList" />
+          <EntitySet Name="Partners" EntityType="Self.Partner" />
+          <AssociationSet Name="EmailListPartners" Association="Self.EmailListPartners">
+            <End Role="EmailLists" EntitySet="EmailLists" />
+            <End Role="Partners" EntitySet="Partners" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="BetC_CRM_DatabaseModelStoreContainer" CdmEntityContainer="BetC_CRM_DatabaseEntities">
+          <EntitySetMapping Name="EmailLists">
+            <EntityTypeMapping TypeName="BetC_CRM_DatabaseModel.EmailList">
+              <MappingFragment StoreEntitySet="EmailLists">
+                <ScalarProperty Name="EmailListID" ColumnName="EmailListID" />
+                <ScalarProperty Name="EmailListName" ColumnName="EmailListName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Partners">
+            <EntityTypeMapping TypeName="BetC_CRM_DatabaseModel.Partner">
+              <MappingFragment StoreEntitySet="Partners">
+                <ScalarProperty Name="PartnerID" ColumnName="PartnerID" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+                <ScalarProperty Name="Position" ColumnName="Position" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="EmailListPartners" TypeName="BetC_CRM_DatabaseModel.EmailListPartners" StoreEntitySet="EmailListPartners">
+            <EndProperty Name="EmailLists">
+              <ScalarProperty Name="EmailListID" ColumnName="EmailLists_EmailListID" />
+            </EndProperty>
+            <EndProperty Name="Partners">
+              <ScalarProperty Name="PartnerID" ColumnName="Partners_PartnerID" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
