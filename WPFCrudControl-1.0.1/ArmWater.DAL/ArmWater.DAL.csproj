@@ -1,0 +1,449 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7846EB7E-BD85-42C5-9906-29032D9C846A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ArmWater.DAL</RootNamespace>
+    <AssemblyName>ArmWater.DAL</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ArmWaterDB.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ArmWaterDB.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ArmWaterDB.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ArmWaterDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ArmWaterDB.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="BS_ACTION_INFO.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BS_DETAIL_INFO.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BS_GROUP.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BS_LANG.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BS_LIB_INFO.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BS_LIB_RELATION_INFO.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BS_METHOD_INFO.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BS_NOTIFICATION_INFO.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BS_OLD_NEW_DUTY_REPORT.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BS_OTHER_SYSTEMS.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BS_PRIVILEGE_CLASS.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BS_PRIVILEGE_CLASS_TYPE.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BS_PRIVILEGE_DETAILS.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BS_PRIVILEGE_METHOD.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BS_PRIVILEGE_PROP.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BS_PRIVILEGE_TASK.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BS_PROCESS.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BS_PROCESS_INFO.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BS_PROC_NAMES.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BS_PROP_INFO.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BS_QUERY.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BS_QUERY_BUILDER.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BS_REPORT_INFO.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BS_SERVICE.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BS_STANDARD_REPORTS.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BS_STANDARD_REPORTS_BUILDER.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BS_STANDARD_REPORTS_PROP.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BS_STRING.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BS_TABLE_SEQUENCES.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BS_USER.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BS_USER_ACTION_LOG.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="fn_GetAllCustomerTableNames_Result.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="fn_GetAllTableNamesAndColumnsForChangingCalculatedField_Result.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="fn_GetAllTableNamesAndColumnsForReCalculationOfChangedCalculatedField_Result.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="fn_GetAllTableNamesForChangingCalculatedField_Result.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="fn_GetAllTableNamesForReCalculationOfChangedCalculatedField_Result.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="fn_GetAllTableNames_Result.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="fn_GetTableNamesForAdditionalDataCopyingForRestoring_Result.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="fn_GetTableNamesForDataCopyingDuringSetup_Result.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="fn_GetTableNamesForManageableDataCopyingForRestoring_Result.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="fn_GetTableNamesForModifiedDataBackupingForArchiving_Result.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="fn_GetTableNamesForSequences_Result.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="fn_GetTableNamesWithClientTypeByCustomerForSequences_Result.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="fn_GetTableNamesWithDATEColumn_Result.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="fn_GetTableNamesWithLASTMODIFIEDColumn_Result.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="fn_SplitIn2Columns_Result.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="fn_Split_Result.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sp_Monitoring_FindRepeatedIDsListForUniqueObjects_Result.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAWDBBANK.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAWDBBILLINGCYCLE.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAWDBBILLINGCYCLEPLAN.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAWDBBILLINGCYCLEROUTE.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAWDBBILLINGCYCLEVISIT.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAWDBBRANCH.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAWDBBRANCHACCOUNT.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAWDBCALCINTERVAL.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAWDBCITY.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAWDBCONTRACTGROUP.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAWDBCOUNTER.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAWDBCOURTCASE.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAWDBCUSTOMSERVICE.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAWDBDEBTCOVERCONTRACT.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAWDBDEBTSCHEDULE.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAWDBDRAINAGEPOINT.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAWDBEMPLOYEE.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAWDBFINANCETYPE.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAWDBFINANCIALSTATEMENT.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAWDBFINANCIALSTATEMENTMONTH.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAWDBINDICATION.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAWDBINSPECTION.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAWDBINSPECTOR.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAWDBINVOICEGROUPING.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAWDBOLDDUTYFSM.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAWDBOLDDUTYORGCNTCALC.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAWDBOLDDUTYRESCNTCALC.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAWDBORGANIZATIONCONTRACT.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAWDBORGCONTRACTCALC.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAWDBPAYMENT.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAWDBREGION.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAWDBRESCONTRACTCALC.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAWDBRESIDENTCONTRACT.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAWDBSNINDICATIONMAP.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAWDBSTATEMENT.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAWDBSTATEMENTMONTH.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAWDBSUBSPHERE.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAWDBSUPPLYNODE.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAWDBSUPPLYNODECALC.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAWDBSUPPLYSCHEDULE.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAWDBTERRITORY.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TAWDBWATERPOINT.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TJODBCLASSPRIVELEGE.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TJODBCSTSPRIVELEGE.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TJODBDETAILPRIVELEGE.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TJODBGLOBALPROPERTY.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TJODBGROUP.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TJODBHISTORY.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TJODBLIBVALUE.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TJODBLIBVALUE257.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TJODBLIBVALUE258.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TJODBLIBVALUE259.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TJODBLIBVALUE261.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TJODBLIBVALUE262.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TJODBLIBVALUE264.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TJODBLIBVALUE265.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TJODBLIBVALUE266.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TJODBLIBVALUE267.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TJODBLIBVALUE5.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TJODBMETHODPRIVELEGE.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TJODBPROPPRIVELEGE.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TJODBQRFIXEDLINE.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TJODBQRLOOPLINE.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TJODBQRREPORT.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TJODBQUERY.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TJODBUSER.cs">
+      <DependentUpon>ArmWaterDB.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="ArmWaterDB.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ArmWaterDB.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="ArmWaterDB.edmx.diagram">
+      <DependentUpon>ArmWaterDB.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ArmWaterDB.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ArmWaterDB.Context.cs</LastGenOutput>
+      <DependentUpon>ArmWaterDB.edmx</DependentUpon>
+    </Content>
+    <Content Include="ArmWaterDB.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ArmWaterDB.edmx</DependentUpon>
+      <LastGenOutput>ArmWaterDB.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ebdefd4aba6047cd8b54b82edcb6f31c" Name="Diagram1" ZoomLevel="80">
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.BS_ACTION_INFO" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.BS_DETAIL_INFO" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.BS_GROUP" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.BS_LANG" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.BS_LIB_INFO" Width="1.5" PointX="4.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.BS_LIB_RELATION_INFO" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.BS_METHOD_INFO" Width="1.5" PointX="6.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.BS_NOTIFICATION_INFO" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.BS_OTHER_SYSTEMS" Width="1.5" PointX="8.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.BS_PRIVILEGE_CLASS" Width="1.5" PointX="8.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.BS_PRIVILEGE_CLASS_TYPE" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.BS_PRIVILEGE_DETAILS" Width="1.5" PointX="0.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.BS_PRIVILEGE_METHOD" Width="1.5" PointX="10.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.BS_PRIVILEGE_PROP" Width="1.5" PointX="10.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.BS_PRIVILEGE_TASK" Width="1.5" PointX="10.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.BS_PROC_NAMES" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.BS_PROP_INFO" Width="1.5" PointX="12.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.BS_QUERY" Width="1.5" PointX="6.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.BS_QUERY_BUILDER" Width="1.5" PointX="0.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.BS_REPORT_INFO" Width="1.5" PointX="2.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.BS_STANDARD_REPORTS" Width="1.5" PointX="8.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.BS_STANDARD_REPORTS_BUILDER" Width="1.5" PointX="10.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.BS_STANDARD_REPORTS_PROP" Width="1.5" PointX="12.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.BS_STRING" Width="1.5" PointX="14.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.BS_TABLE_SEQUENCES" Width="1.5" PointX="14.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.BS_USER" Width="1.5" PointX="14.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.TAWDBBANK" Width="1.5" PointX="14.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.TAWDBBILLINGCYCLE" Width="1.5" PointX="16.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.TAWDBBILLINGCYCLEPLAN" Width="1.5" PointX="16.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.TAWDBBILLINGCYCLEROUTE" Width="1.5" PointX="4.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.TAWDBBILLINGCYCLEVISIT" Width="1.5" PointX="16.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.TAWDBBRANCH" Width="1.5" PointX="16.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.TAWDBBRANCHACCOUNT" Width="1.5" PointX="6.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.TAWDBCALCINTERVAL" Width="1.5" PointX="8.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.TAWDBCITY" Width="1.5" PointX="10.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.TAWDBCONTRACTGROUP" Width="1.5" PointX="12.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.TAWDBCOUNTER" Width="1.5" PointX="18.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.TAWDBCOURTCASE" Width="1.5" PointX="18.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.TAWDBCUSTOMSERVICE" Width="1.5" PointX="18.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.TAWDBDEBTCOVERCONTRACT" Width="1.5" PointX="18.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.TAWDBDEBTSCHEDULE" Width="1.5" PointX="20.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.TAWDBDRAINAGEPOINT" Width="1.5" PointX="20.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.TAWDBEMPLOYEE" Width="1.5" PointX="20.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.TAWDBFINANCETYPE" Width="1.5" PointX="20.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.TAWDBFINANCIALSTATEMENT" Width="1.5" PointX="20.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.TAWDBFINANCIALSTATEMENTMONTH" Width="1.5" PointX="4.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.TAWDBINDICATION" Width="1.5" PointX="6.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.TAWDBINSPECTION" Width="1.5" PointX="12.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.TAWDBINSPECTOR" Width="1.5" PointX="22.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.TAWDBINVOICEGROUPING" Width="1.5" PointX="22.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.TAWDBOLDDUTYFSM" Width="1.5" PointX="8.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.TAWDBOLDDUTYORGCNTCALC" Width="1.5" PointX="22.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.TAWDBOLDDUTYRESCNTCALC" Width="1.5" PointX="22.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.TAWDBORGANIZATIONCONTRACT" Width="1.5" PointX="0.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.TAWDBORGCONTRACTCALC" Width="1.5" PointX="24.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.TAWDBPAYMENT" Width="1.5" PointX="24.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.TAWDBREGION" Width="1.5" PointX="22.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.TAWDBRESCONTRACTCALC" Width="1.5" PointX="24.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.TAWDBRESIDENTCONTRACT" Width="1.5" PointX="18.75" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.TAWDBSNINDICATIONMAP" Width="1.5" PointX="26.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.TAWDBSTATEMENT" Width="1.5" PointX="26.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.TAWDBSTATEMENTMONTH" Width="1.5" PointX="6.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.TAWDBSUBSPHERE" Width="1.5" PointX="26.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.TAWDBSUPPLYNODE" Width="1.5" PointX="8.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.TAWDBSUPPLYNODECALC" Width="1.5" PointX="26.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.TAWDBSUPPLYSCHEDULE" Width="1.5" PointX="26.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.TAWDBTERRITORY" Width="1.5" PointX="26.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.TAWDBWATERPOINT" Width="1.5" PointX="2.75" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.TJODBCLASSPRIVELEGE" Width="1.5" PointX="10.75" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.TJODBCSTSPRIVELEGE" Width="1.5" PointX="12.75" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.TJODBDETAILPRIVELEGE" Width="1.5" PointX="14.75" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.TJODBGLOBALPROPERTY" Width="1.5" PointX="28.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.TJODBGROUP" Width="1.5" PointX="28.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.TJODBHISTORY" Width="1.5" PointX="28.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.TJODBLIBVALUE" Width="1.5" PointX="28.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.TJODBLIBVALUE257" Width="1.5" PointX="28.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.TJODBLIBVALUE258" Width="1.5" PointX="28.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.TJODBLIBVALUE259" Width="1.5" PointX="20.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.TJODBLIBVALUE261" Width="1.5" PointX="28.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.TJODBLIBVALUE262" Width="1.5" PointX="28.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.TJODBLIBVALUE264" Width="1.5" PointX="30.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.TJODBLIBVALUE265" Width="1.5" PointX="30.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.TJODBLIBVALUE266" Width="1.5" PointX="30.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.TJODBLIBVALUE267" Width="1.5" PointX="10.75" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.TJODBLIBVALUE5" Width="1.5" PointX="30.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.TJODBMETHODPRIVELEGE" Width="1.5" PointX="12.75" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.TJODBPROPPRIVELEGE" Width="1.5" PointX="14.75" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.TJODBQRFIXEDLINE" Width="1.5" PointX="30.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.TJODBQRLOOPLINE" Width="1.5" PointX="30.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.TJODBQRREPORT" Width="1.5" PointX="26.75" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.TJODBQUERY" Width="1.5" PointX="30.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.TJODBUSER" Width="1.5" PointX="32.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.BS_OLD_NEW_DUTY_REPORT" Width="1.5" PointX="32.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.BS_PROCESS" Width="1.5" PointX="4.75" PointY="32.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.BS_PROCESS_INFO" Width="1.5" PointX="6.75" PointY="32.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.BS_SERVICE" Width="1.5" PointX="32.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GlobalDB_022014_currentModel.BS_USER_ACTION_LOG" Width="1.5" PointX="32.75" PointY="11.75" IsExpanded="true" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

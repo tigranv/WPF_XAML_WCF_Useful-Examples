@@ -1,0 +1,65 @@
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# =========================
+# Operating System Files
+# =========================
+
+# OSX
+# =========================
+
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+
+# Exclude specific Directories
+/.vs
+/GenericCodes.Core/bin
+/GenericCodes.Core/obj
+/GenericCodes.CRUD.WPF/bin
+/GenericCodes.CRUD.WPF/obj
+/GenericCodes.Resources/bin
+/GenericCodes.Resources/obj
+/Northwind.DAL/bin
+/Northwind.DAL/obj
+/Northwind.Demo/bin
+/Northwind.Demo/obj
+/Northwind.Service/bin
+/Northwind.Service/obj
+/packages
+/GenericCodes.CRUDWPFNuGet.Packager/bin
+/GenericCodes.CRUDWPFNuGet.Packager/obj
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
