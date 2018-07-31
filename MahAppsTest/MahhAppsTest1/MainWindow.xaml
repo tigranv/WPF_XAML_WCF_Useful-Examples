@@ -6,8 +6,19 @@
         xmlns:local="clr-namespace:MahhAppsTest1"
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        BorderThickness="0" 
+                      GlowBrush="Blue"
+                      ResizeMode="CanResizeWithGrip"
+
+                      WindowTransitionsEnabled="False"
+                      WindowStartupLocation="CenterScreen"
+        Title="MainWindow" Height="350" Width="525"
+
+
+    >
+
     <Grid>
-        
     </Grid>
 </Controls:MetroWindow>
+
+
